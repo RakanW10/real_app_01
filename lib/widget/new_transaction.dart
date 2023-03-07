@@ -38,13 +38,21 @@ class _NewTransationState extends State<NewTransation> {
             TextField(
               controller: titleController,
               onSubmitted: (_) => submitData(),
-              decoration: InputDecoration(labelText: "Title"),
+              style: Theme.of(context).textTheme.bodySmall,
+              decoration: InputDecoration(
+                labelText: "Title",
+                labelStyle: Theme.of(context).textTheme.titleSmall,
+              ),
             ),
             TextField(
               controller: amountController,
               keyboardType: TextInputType.number,
               onSubmitted: (_) => submitData(),
-              decoration: InputDecoration(labelText: "Amount"),
+              style: Theme.of(context).textTheme.bodySmall,
+              decoration: InputDecoration(
+                labelText: "Amount",
+                labelStyle: Theme.of(context).textTheme.titleSmall,
+              ),
             ),
             TextButton(
               onPressed: () => submitData(),
